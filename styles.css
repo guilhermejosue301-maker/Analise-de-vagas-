@@ -1,0 +1,92 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f172a; /* Cor de fundo principal (azul bem escuro) */
+    color: #cbd5e1; /* Cor do texto principal (cinza claro) */
+}
+
+/* --- EFEITO DE VIDRO (GLASSMORPHISM) --- */
+.glass-card {
+    background: rgba(30, 41, 59, 0.5); /* Fundo semi-transparente */
+    backdrop-filter: blur(12px); /* Efeito de desfoque no fundo */
+    -webkit-backdrop-filter: blur(12px); /* Para compatibilidade com Safari */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    border-radius: 1rem; /* Cantos arredondados */
+    transition: all 0.3s ease; /* Animação suave para interações */
+}
+
+.glass-card:hover {
+    transform: translateY(-5px); /* Efeito de levantar o card ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Sombra para dar profundidade */
+}
+
+/* --- TAGS DE HABILIDADES --- */
+.skill-tag {
+    background-color: #0ea5e9; /* Cor azul para Hard Skills */
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    display: inline-block;
+    margin: 0.25rem;
+}
+
+.soft-skill-tag {
+    background-color: #10b981; /* Cor verde para Soft Skills */
+}
+
+/* --- NAVEGAÇÃO POR ABAS --- */
+.tab-container {
+    position: relative;
+    display: inline-flex;
+    padding: 0.25rem;
+    border-radius: 9999px;
+}
+
+#tab-marker {
+    position: absolute;
+    top: 0.25rem;
+    height: calc(100% - 0.5rem);
+    background-color: #38bdf8; /* Cor do marcador da aba ativa */
+    border-radius: 9999px;
+    transition: all 0.3s ease-in-out; /* Animação de deslizamento */
+    z-index: 1; /* Fica abaixo do texto dos botões */
+}
+
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #94a3b8; /* Cor do texto das abas inativas */
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 2; /* Fica acima do marcador */
+    white-space: nowrap; /* Impede que o texto quebre em telas menores */
+}
+
+.tab-button.active {
+    color: #0f172a; /* Cor do texto da aba ativa (escuro para contrastar com o marcador azul) */
+}
+
+/* --- CONTEÚDO DAS PÁGINAS (ABAS) --- */
+.page-content {
+    display: none; /* Esconde as páginas por padrão */
+}
+
+.page-content.active {
+    display: block; /* Mostra apenas a página ativa */
+    animation: fadeIn 0.5s ease-in-out; /* Aplica a animação de fade-in */
+}
+
+/* Animação para o conteúdo aparecer suavemente */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}

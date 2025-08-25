@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Mercado e Carreira Tech</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-900 text-slate-300">
+
+    <!-- Cabeçalho -->
+    <header class="bg-slate-900/70 backdrop-blur-md sticky top-0 z-20 border-b border-slate-800">
+        <div class="container mx-auto px-6 py-6 text-center">
+            <h1 class="text-4xl font-bold text-slate-50">Análise de Mercado e Carreira Tech</h1>
+            <p class="mt-2 text-lg text-slate-400">Um estudo sobre vagas, competências e salários no setor de T.I.</p>
+            <p class="mt-4 font-semibold text-slate-300">Por: Gabriel Mendes & Guilherme Josué</p>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Navegação das Abas -->
+        <div class="mb-10 flex justify-center">
+            <div id="tab-container" class="glass-card tab-container">
+                <div id="tab-marker"></div>
+                <button id="btn-intro" class="tab-button" onclick="showPage('intro')">Introdução</button>
+                <button id="btn-vagas" class="tab-button" onclick="showPage('vagas')">Vagas</button>
+                <button id="btn-analise" class="tab-button" onclick="showPage('analise')">Análise Detalhada</button>
+            </div>
+        </div>
+        
+        <!-- Seção: Introdução -->
+        <div id="page-intro" class="page-content">
+             <section class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-slate-100 mb-4">Bem-vindo ao nosso Painel de Carreira Tech!</h2>
+                <p class="text-lg text-slate-400 leading-relaxed">
+                    Navegar pelo mercado de tecnologia pode ser um desafio. Que habilidades são mais valorizadas? Quais salários esperar? Para responder a essas perguntas, mergulhamos em diversas vagas reais de T.I. e compilamos os dados mais importantes para você.
+                </p>
+                <p class="mt-4 text-lg text-slate-400 leading-relaxed">
+                    Este projeto é o resultado da nossa pesquisa e análise, criado para oferecer um panorama claro e direto sobre o cenário atual. Explore as abas de <span class="font-semibold text-sky-400">Vagas</span> e <span class="font-semibold text-sky-400">Análise Detalhada</span> para descobrir as competências, tendências e insights que podem guiar os próximos passos da sua carreira.
+                </p>
+            </section>
+        </div>
+
+        <!-- Seção: Vagas -->
+        <div id="page-vagas" class="page-content">
+            <section id="vagas-pesquisadas">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass-card flex"><div class="p-6 flex flex-col h-full"><h3 class="text-xl font-bold text-sky-400">Desenvolvedor Front End Júnior</h3><p class="text-sm text-slate-400 mb-4">Empresa: Treinus</p><div class="mb-4"><h4 class="font-semibold mb-2 text-slate-200">Hard Skills:</h4><div><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">React</span></div></div><div class="mb-4"><h4 class="font-semibold mb-2 text-slate-200">Soft Skills:</h4><div><span class="skill-tag soft-skill-tag">Proatividade</span><span class="skill-tag soft-skill-tag">Resolução de problemas</span></div></div><div class="mt-auto pt-4 border-t border-slate-700"><p class="font-semibold text-slate-200">Faixa Salarial (Júnior): <span class="text-green-400">R$ 3.000 - R$ 5.000</span></p><p class="text-sm text-slate-400">Local: São Paulo (Remoto)</p></div></div></div>
+                    <div class="glass-card flex"><div class="p-6 flex flex-col h-full"><h3 class="text-xl font-bold text-sky-400">Analista de Automação Pleno</h3><p class="text-sm text-slate-400 mb-4">Empresa: SBV</p><div class="mb-4"><h4 class="font-semibold mb-2 text-slate-200">Hard Skills:</h4><div><span class="skill-tag">Python</span><span class="skill-tag">Selenium</span><span class="skill-tag">Testes Automatizados</span></div></div><div class="mb-4"><h4 class="font-semibold mb-2 text-slate-200">Soft Skills:</h4><div><span class="skill-tag soft-skill-tag">Atenção aos Detalhes</span><span class="skill-tag soft-skill-tag">Colaboração</span></div></div><div class="mt-auto pt-4 border-t border-slate-700"><p class="font-semibold text-slate-200">Faixa Salarial (Pleno): <span class="text-green-400">R$ 6.000 - R$ 9.000</span></p><p class="text-sm text-slate-400">Local: Rio de Janeiro (Híbrido)</p></div></div></div>
+                    <div class="glass-card flex"><div class="p-6 flex flex-col h-full"><h3 class="text-xl font-bold text-sky-400">Desenvolvedor de Jogos Júnior</h3><p class="text-sm text-slate-400 mb-4">Empresa: Tapps Games</p><div class="mb-4"><h4 class="font-semibold mb-2 text-slate-200">Hard Skills:</h4><div><span class="skill-tag">C#</span><span class="skill-tag">Unity</span><span class="skill-tag">Lógica de Programação</span></div></div><div class="mb-4"><h4 class="font-semibold mb-2 text-slate-200">Soft Skills:</h4><div><span class="skill-tag soft-skill-tag">Criatividade</span><span class="skill-tag soft-skill-tag">Trabalho em equipe</span></div></div><div class="mt-auto pt-4 border-t border-slate-700"><p class="font-semibold text-slate-200">Faixa Salarial (Júnior): <span class="text-green-400">R$ 2.500 - R$ 4.500</span></p><p class="text-sm text-slate-400">Local: Belo Horizonte (Presencial)</p></div></div></div>
+                    <div class="glass-card flex"><div class="p-6 flex flex-col h-full"><h3 class="text-xl font-bold text-sky-400">Desenvolvedor Back-End Júnior</h3><p class="text-sm text-slate-400 mb-4">Empresa: Tech Solutions</p><div class="mb-4"><h4 class="font-semibold mb-2 text-slate-200">Hard Skills:</h4><div><span class="skill-tag">Java</span><span class="skill-tag">Spring Boot</span><span class="skill-tag">SQL</span></div></div><div class="mb-4"><h4 class="font-semibold mb-2 text-slate-200">Soft Skills:</h4><div><span class="skill-tag soft-skill-tag">Organização</span><span class="skill-tag soft-skill-tag">Autonomia</span></div></div><div class="mt-auto pt-4 border-t border-slate-700"><p class="font-semibold text-slate-200">Faixa Salarial (Júnior): <span class="text-green-400">R$ 3.500 - R$ 5.500</span></p><p class="text-sm text-slate-400">Local: Curitiba (Remoto)</p></div></div></div>
+                    <div class="glass-card flex"><div class="p-6 flex flex-col h-full"><h3 class="text-xl font-bold text-sky-400">UX/UI Designer Pleno</h3><p class="text-sm text-slate-400 mb-4">Empresa: Creative Minds</p><div class="mb-4"><h4 class="font-semibold mb-2 text-slate-200">Hard Skills:</h4><div><span class="skill-tag">Figma</span><span class="skill-tag">Adobe XD</span><span class="skill-tag">Pesquisa de Usuário</span></div></div><div class="mb-4"><h4 class="font-semibold mb-2 text-slate-200">Soft Skills:</h4><div><span class="skill-tag soft-skill-tag">Empatia</span><span class="skill-tag soft-skill-tag">Pensamento Crítico</span></div></div><div class="mt-auto pt-4 border-t border-slate-700"><p class="font-semibold text-slate-200">Faixa Salarial (Pleno): <span class="text-green-400">R$ 5.500 - R$ 8.500</span></p><p class="text-sm text-slate-400">Local: Porto Alegre (Híbrido)</p></div></div></div>
+                    <div class="glass-card flex"><div class="p-6 flex flex-col h-full"><h3 class="text-xl font-bold text-sky-400">Engenheiro de Dados Júnior</h3><p class="text-sm text-slate-400 mb-4">Empresa: Data Innovators</p><div class="mb-4"><h4 class="font-semibold mb-2 text-slate-200">Hard Skills:</h4><div><span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">AWS</span></div></div><div class="mb-4"><h4 class="font-semibold mb-2 text-slate-200">Soft Skills:</h4><div><span class="skill-tag soft-skill-tag">Curiosidade</span><span class="skill-tag soft-skill-tag">Raciocínio Lógico</span></div></div><div class="mt-auto pt-4 border-t border-slate-700"><p class="font-semibold text-slate-200">Faixa Salarial (Júnior): <span class="text-green-400">R$ 4.000 - R$ 6.000</span></p><p class="text-sm text-slate-400">Local: Brasília (Presencial)</p></div></div></div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Seção: Análise Detalhada -->
+        <div id="page-analise" class="page-content">
+            <div class="space-y-10">
+                <!-- Análise de Competências -->
+                <section class="glass-card p-8">
+                    <h2 class="text-2xl font-bold text-slate-100 mb-6 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3" /></svg>Análise de Competências</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-slate-200">Hard Skills Mais Requisitadas</h3>
+                            <div class="space-y-4">
+                                <div class="w-full"><div class="text-sm font-medium flex justify-between"><span>Python</span><span>3 Vagas</span></div><div class="bg-slate-700 rounded-full h-2.5"><div class="bg-gradient-to-r from-sky-500 to-cyan-400 h-2.5 rounded-full" style="width: 66%"></div></div></div>
+                                <div class="w-full"><div class="text-sm font-medium flex justify-between"><span>SQL</span><span>2 Vagas</span></div><div class="bg-slate-700 rounded-full h-2.5"><div class="bg-gradient-to-r from-sky-500 to-cyan-400 h-2.5 rounded-full" style="width: 66%"></div></div></div>
+                                <div class="w-full"><div class="text-sm font-medium flex justify-between"><span>JavaScript</span><span>1 Vaga</span></div><div class="bg-slate-700 rounded-full h-2.5"><div class="bg-gradient-to-r from-sky-500 to-cyan-400 h-2.5 rounded-full" style="width: 33%"></div></div></div>
+                                <div class="w-full"><div class="text-sm font-medium flex justify-between"><span>AWS</span><span>1 Vaga</span></div><div class="bg-slate-700 rounded-full h-2.5"><div class="bg-gradient-to-r from-sky-500 to-cyan-400 h-2.5 rounded-full" style="width: 33%"></div></div></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-slate-200">Soft Skills Mais Valorizadas</h3>
+                            <div class="flex flex-wrap gap-3 items-center"><span class="skill-tag soft-skill-tag text-lg">Colaboração</span><span class="skill-tag soft-skill-tag">Proatividade</span><span class="skill-tag soft-skill-tag">Criatividade</span><span class="skill-tag soft-skill-tag text-lg">Resolução de Problemas</span><span class="skill-tag soft-skill-tag">Comunicação</span><span class="skill-tag soft-skill-tag">Autonomia</span><span class="skill-tag soft-skill-tag">Pensamento Crítico</span></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Análise Salarial -->
+                <section class="glass-card p-8">
+                    <h2 class="text-2xl font-bold text-slate-100 mb-6 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg>Análise Salarial Comparativa</h2>
+                    <div class="overflow-x-auto"><table class="w-full text-left"><thead class="border-b border-slate-700"><tr class="text-slate-100"><th class="p-4 font-semibold">Cargo</th><th class="p-4 font-semibold">Nível</th><th class="p-4 font-semibold">Faixa Salarial</th></tr></thead><tbody><tr class="border-b border-slate-800"><td class="p-4">Desenvolvedor de Jogos</td><td class="p-4">Júnior</td><td class="p-4 font-medium text-green-400">R$ 2.500 - R$ 4.500</td></tr><tr class="border-b border-slate-800"><td class="p-4">Desenvolvedor Front-End</td><td class="p-4">Júnior</td><td class="p-4 font-medium text-green-400">R$ 3.000 - R$ 5.000</td></tr><tr class="border-b border-slate-800"><td class="p-4">Desenvolvedor Back-End</td><td class="p-4">Júnior</td><td class="p-4 font-medium text-green-400">R$ 3.500 - R$ 5.500</td></tr><tr class="border-b border-slate-800"><td class="p-4">Engenheiro de Dados</td><td class="p-4">Júnior</td><td class="p-4 font-medium text-green-400">R$ 4.000 - R$ 6.000</td></tr><tr class="border-b border-slate-800"><td class="p-4">UX/UI Designer</td><td class="p-4">Pleno</td><td class="p-4 font-medium text-green-400">R$ 5.500 - R$ 8.500</td></tr><tr><td class="p-4">Analista de Automação</td><td class="p-4">Pleno</td><td class="p-4 font-medium text-green-400">R$ 6.000 - R$ 9.000</td></tr></tbody></table></div>
+                </section>
+                 <!-- Análise de Tendências -->
+                 <section class="glass-card p-8">
+                    <h2 class="text-2xl font-bold text-slate-100 mb-4 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>Análise de Tendências</h2>
+                    <p class="text-slate-300 leading-relaxed">Com base nos dados, observamos uma forte demanda por profissionais com conhecimento em <span class="font-semibold text-sky-400">Python</span> e <span class="font-semibold text-sky-400">SQL</span>, indicando o crescimento contínuo das áreas de dados e automação. A presença de <span class="font-semibold text-sky-400">AWS</span> na vaga de Engenharia de Dados reforça a tendência de migração para a nuvem (Cloud Computing) como um requisito cada vez mais comum. Além disso, a variedade de modalidades (Remoto, Híbrido, Presencial) mostra um mercado de trabalho flexível e adaptado às novas realidades.</p>
+                </section>
+                <!-- Plano de Ação -->
+                <section class="glass-card p-8 border-t-4 border-emerald-500">
+                    <h2 class="text-2xl font-bold text-center mb-6 text-slate-100 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>Plano de Ação (Próximos 6 Meses)</h2>
+                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                        <div><h3 class="text-xl font-semibold mb-2 text-emerald-400">Hard Skill 1: Aprofundar em Python</h3><p class="text-slate-400">Focar em bibliotecas para análise de dados (Pandas) e automação (Selenium), dada sua alta requisição no mercado.</p></div>
+                        <div><h3 class="text-xl font-semibold mb-2 text-emerald-400">Hard Skill 2: Fundamentos de Cloud (AWS)</h3><p class="text-slate-400">Iniciar estudos sobre os principais serviços da AWS, como S3 e EC2, para ganhar uma base na tecnologia de nuvem mais demandada.</p></div>
+                        <div><h3 class="text-xl font-semibold mb-2 text-emerald-400">Soft Skill: Comunicação e Colaboração</h3><p class="text-slate-400">Praticar a participação ativa em projetos de grupo, focando em comunicar ideias de forma clara e colaborar para resolver problemas em equipe.</p></div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-slate-900 border-t border-slate-800 mt-16">
+        <div class="container mx-auto px-6 py-6 text-center text-slate-400">
+            <p>&copy; 2024 - Gabriel Mendes & Guilherme Josué. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
